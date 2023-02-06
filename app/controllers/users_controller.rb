@@ -7,6 +7,9 @@ def create
     password_confirmation: params[:password_confirmation],
     image_url: params[:image_url]
   )
+  if user.save
+    render json: {messsage: "User account successfully created!"}
+  end
 end
 
 end

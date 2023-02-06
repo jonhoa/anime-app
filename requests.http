@@ -1,2 +1,25 @@
-#INDEX
+
+###User Create
+post http://localhost:3000/users
+Content-Type: application/json 
+
+{
+  "name": "admin",
+  "email": "admin@test.com",
+  "password": "password",
+  "password_confirmation": "password",
+  "image_url": "..."
+}
+
+###Session Login
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "admin@test.com",
+  "password": "password"
+}
+
+###INDEX
 get http://localhost:3000/all
+
