@@ -9,6 +9,8 @@ def create
   )
   if user.save
     render json: {messsage: "User account successfully created!"}
+  else
+    render json: { errors: user.errors.full_messages }, status: :bad_request
   end
 end
 
