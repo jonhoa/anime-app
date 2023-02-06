@@ -1,0 +1,2 @@
+#INDEX
+get http://localhost:3000/all
