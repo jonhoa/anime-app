@@ -1,3 +1,4 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzU4MDUxODZ9.QGGoT3BIRrthMi2-a0l4uNdjcakgTouhELxOFiHIEuc
 
 ###User Create
 post http://localhost:3000/users
@@ -26,10 +27,9 @@ get http://localhost:3000/all
 
 ###Add Favorites
 POST http://localhost:3000/favorites/add
-# Authorization: Bearer "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzU4MDUxODZ9.QGGoT3BIRrthMi2-a0l4uNdjcakgTouhELxOFiHIEuc"
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "user_id": "2",
   "item_id": "6"
 }
