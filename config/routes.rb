@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   post '/sessions' => 'sessions#create'
   post '/users' => 'users#create'
 
+
+  post '/favorites/add' => 'favorites#create'
+
   get "/all" => "items#index"
 end
 

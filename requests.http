@@ -23,3 +23,13 @@ Content-Type: application/json
 ###INDEX
 get http://localhost:3000/all
 
+
+###Add Favorites
+POST http://localhost:3000/favorites/add
+# Authorization: Bearer "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzU4MDUxODZ9.QGGoT3BIRrthMi2-a0l4uNdjcakgTouhELxOFiHIEuc"
+Content-Type: application/json
+
+{
+  "user_id": "2",
+  "item_id": "6"
+}
