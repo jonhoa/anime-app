@@ -24,6 +24,9 @@ Content-Type: application/json
 ###INDEX
 get http://localhost:3000/all
 
+###SHOW
+GET http://localhost:3000/items/6
+
 
 ###Add Favorites
 POST http://localhost:3000/favorites/add

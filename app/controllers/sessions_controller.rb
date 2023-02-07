@@ -14,6 +14,7 @@ class SessionsController < ApplicationController
         "HS256" # the encryption algorithm
       )
       render json: { jwt: jwt, email: user.email, user_id: user.id }, status: :created
+      @jwt = jwt
     else
       render json: {}, status: :unauthorized
     end

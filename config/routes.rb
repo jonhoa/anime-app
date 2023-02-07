@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   post '/favorites/add' => 'favorites#create'
 
   get "/all" => "items#index"
+  get "/items/:id" => "items#show"
 end
 
