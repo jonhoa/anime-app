@@ -36,3 +36,7 @@ Content-Type: application/json
 {
   "item_id": "6"
 }
+
+###Delete Favorites
+DELETE http://localhost:3000/favorites/10
+Authorization: Bearer {{jwt}}
