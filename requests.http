@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzU4MDUxODZ9.QGGoT3BIRrthMi2-a0l4uNdjcakgTouhELxOFiHIEuc
+# @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzU4MDUxODZ9.QGGoT3BIRrthMi2-a0l4uNdjcakgTouhELxOFiHIEuc
 
 ###User Create
 post http://localhost:3000/users
@@ -11,6 +11,9 @@ Content-Type: application/json
   "password_confirmation": "password",
   "image_url": ""
 }
+
+###User Show
+GET http://localhost:3000/user/1
 
 ###Session Login
 POST http://localhost:3000/login
@@ -25,7 +28,7 @@ Content-Type: application/json
 get http://localhost:3000/all
 
 ###SHOW
-GET http://localhost:3000/items/6
+GET http://localhost:3000/anime/4
 
 
 ###Add Favorites

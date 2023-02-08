@@ -14,4 +14,12 @@ def create
   end
 end
 
+def show
+  # show info if logged in and authorized
+  user = User.find(params[:id])
+  name = user.name
+  pic = user.image_url
+  render json: {name: name.as_json, pic: pic.as_json }
+end
+
 end

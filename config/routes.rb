@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
+  get '/user/:id' => 'users#show'
   post '/sessions' => 'sessions#create'
   post '/users' => 'users#create'
 
@@ -15,6 +16,6 @@ Rails.application.routes.draw do
   delete '/favorites/:id' => 'favorites#destroy'
 
   get "/all" => "items#index"
-  get "/items/:id" => "items#show"
+  get "/anime/:id" => "items#show"
 end
 
