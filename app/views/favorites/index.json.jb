@@ -1,0 +1,6 @@
+@favorites.map do |favorite|
+  {
+    id: favorite.id,
+    item: favorite.item
+  }
+end

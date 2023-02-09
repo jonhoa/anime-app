@@ -1,4 +1,4 @@
-# @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzU4MDUxODZ9.QGGoT3BIRrthMi2-a0l4uNdjcakgTouhELxOFiHIEuc
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzYwNTM4NzJ9.wxDjoIroDRpeTPoPsxTzH8x2CJmnROTcR3j5aRVxh7g
 
 ###User Create
 post http://localhost:3000/users
@@ -31,15 +31,19 @@ get http://localhost:3000/all
 GET http://localhost:3000/anime/4
 
 
+###Index Favorites
+GET http://localhost:3000/favorites.json
+Authorization: Bearer {{jwt}}
+
 ###Add Favorites
 POST http://localhost:3000/favorites/add
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "item_id": "6"
+  "item_id": "5"
 }
 
 ###Delete Favorites
-DELETE http://localhost:3000/favorites/10
+DELETE http://localhost:3000/favorites/11
 Authorization: Bearer {{jwt}}
