@@ -2,5 +2,6 @@
   {
     id: favorite.id,
     item: favorite.item
+    
   }
 end

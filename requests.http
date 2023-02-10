@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzYwNTM4NzJ9.wxDjoIroDRpeTPoPsxTzH8x2CJmnROTcR3j5aRVxh7g
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzYxMzg3MDJ9.nuxGV2wVXLEjT8xotPfzdRey0hg9IFrfMtViZ1qNO0I
 
 ###User Create
 post http://localhost:3000/users
@@ -20,7 +20,7 @@ POST http://localhost:3000/login
 Content-Type: application/json
 
 {
-  "email": "test@test.com",
+  "email": "admin@test.com",
   "password": "password"
 }
 
@@ -28,7 +28,8 @@ Content-Type: application/json
 get http://localhost:3000/all
 
 ###SHOW
-GET http://localhost:3000/anime/4
+GET http://localhost:3000/anime/5.json
+Authorization: Bearer {{jwt}}
 
 
 ###Index Favorites
@@ -41,9 +42,9 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "item_id": "5"
+  "item_id": "6"
 }
 
 ###Delete Favorites
-DELETE http://localhost:3000/favorites/11
+DELETE http://localhost:3000/favorites/3
 Authorization: Bearer {{jwt}}
