@@ -6,13 +6,19 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find_by(id: params[:id])
-    favoritescheck = Favorite.where(user_id: current_user.id ,item_id: @item.id)
+    @userstatus = false
+    @favorited = true
 
-    if favoritescheck.length == 0
-      @favorited = false
-      puts "not favorited"
-    else 
-      @favorited = true
+    if current_user
+      @favorite = Favorite.where(user_id: current_user.id ,item_id: @item.id)
+      @userstatus = true
+
+      if @favorite.length == 0
+        @favorited = false
+        puts "not favorited"
+      else 
+        @favorited = true
+      end
     end
 
     render template: "items/show"
