@@ -46,5 +46,5 @@ Content-Type: application/json
 }
 
 ###Delete Favorites
-DELETE http://localhost:3000/favorites/3
+DELETE http://localhost:3000/favorites/16
 Authorization: Bearer {{jwt}}
