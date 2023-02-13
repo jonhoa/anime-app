@@ -19,7 +19,9 @@ def show
   user = User.find(current_user.id)
   name = user.name
   pic = user.image_url
-  render json: {name: name.as_json, pic: pic.as_json }
+  created = user.created_at
+  created = created.strftime('%b %d %Y, %I %M %p')
+  render json: {name: name.as_json, pic: pic.as_json, created: created.as_json }
 end
 
 end
