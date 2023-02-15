@@ -4,6 +4,7 @@ if @userstatus
   name: @item.name,
   image_url: @item.image_url,
   description: @item.description,
+  video: @item.video,
   favorited: @favorited
 }
 else

@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   def index
-    items = Item.all
+    items = Item.order(:id)
     render json: items.as_json
   end
 
