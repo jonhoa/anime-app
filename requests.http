@@ -24,10 +24,10 @@ Content-Type: application/json
   "password": "password"
 }
 
-###INDEX
+###Index
 get http://localhost:3000/all
 
-###SHOW
+###Show
 GET http://localhost:3000/anime/5.json
 Authorization: Bearer {{jwt}}
 
